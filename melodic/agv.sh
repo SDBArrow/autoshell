@@ -11,6 +11,7 @@ sudo chmod 777 /dev/ttyUSB0
 #Arduino權限 及 馬達控制和電量資料
 sudo chmod 777 /dev/ttyACM0
 gnome-terminal -- bash -c "source '/home/dickman/catkin_ws/devel/setup.bash';rosrun rosserial_python serial_node.py /dev/ttyACM0"
+sleep 2
 #ROSbridge
 gnome-terminal -- bash -c "source '/home/dickman/catkin_ws/devel/setup.bash';roslaunch rosbridge_server rosbridge_websocket.launch"
 #轉換資料格式給WebAPP
