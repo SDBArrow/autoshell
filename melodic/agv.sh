@@ -17,7 +17,7 @@ gnome-terminal -- bash -c "source '/home/dickman/catkin_ws/devel/setup.bash';ros
 gnome-terminal -- bash -c "source '/home/dickman/catkin_ws/devel/setup.bash';rosrun agv_robot_pose_publisher agv_robot_pose_publisher"
 # Move_base+Cartographer+rplidar+MapServer 節點
 gnome-terminal -- bash -c "source '/home/dickman/catkin_ws/devel/setup.bash';roslaunch agv_nav move_base_cartographer.launch"
-sleep                                                       
+sleep 40                                                       
 gnome-terminal -- bash -c "source '/home/dickman/catkin_ws/devel/setup.bash';rosservice call /move_base/clear_costmaps "{}""
 
 #gnome-terminal -- bash -c "source '/home/dickman/catkin_ws/devel/setup.bash';rostopic pub /move_base/cancel actionlib_msgs/GoalID -- {}"
